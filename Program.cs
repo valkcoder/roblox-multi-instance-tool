@@ -39,7 +39,7 @@ class Program
         if (IsRobloxRunning())
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("opening singletonEvent..");
+            Console.WriteLine("roblox is running, opening singletonEvent..");
             Console.ResetColor();
 
             _handle = OpenEvent(EVENT_MODIFY_STATE | SYNCHRONIZE, false, eventName);
@@ -54,13 +54,14 @@ class Program
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("failed to open mutex");
                 Console.ResetColor();
+                Console.ReadLine();
                 return;
             }
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("creating mutex..");
+            Console.WriteLine("roblox isn't running, creating mutex..");
             Console.ResetColor();
 
             _handle = CreateMutex(IntPtr.Zero, true, eventName);
@@ -75,6 +76,7 @@ class Program
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("failed to create mutex");
                 Console.ResetColor();
+                Console.ReadLine();
                 return;
             }
         }
@@ -87,7 +89,11 @@ class Program
 
     static bool IsRobloxRunning()
     {
-        Process[] robloxProcesses = Process.GetProcessesByName("RobloxPlayerBeta");
-        return robloxProcesses.Length > 0;
+        Console.WriteLine("is roblox open rn?");
+
+        string response = Console.ReadLine()?.Trim().ToLower();
+        bool isRobloxOpen = response == "y";
+
+        return isRobloxOpen;
     }
 }
