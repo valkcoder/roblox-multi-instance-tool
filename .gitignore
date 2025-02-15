@@ -1,0 +1,21 @@
+# Ignore compiled files
+*.exe
+*.dll
+
+# Ignore logs and other temporary files
+*.log
+*.tmp
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build directories
+bin/
+obj/
+
+# Other stuff
+Properties/
+MultiLauncherV2.vcxproj
+MultiLauncherV2.vcxproj.filters
+MultiLauncherV2.vcxproj.user
