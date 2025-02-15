@@ -2,8 +2,7 @@
 #include <windows.h>
 #include "logger.h"
 
-const std::wstring programName = L"singleInstance";
-const std::wstring programName = L"singleInstance";
+const std::wstring programName = L"singleInstanceRoblox";
 const std::wstring robloxMutexName = L"ROBLOX_singletonMutex";
 Logger& logger = Logger::getInstance();
 

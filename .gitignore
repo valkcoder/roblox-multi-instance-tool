@@ -16,6 +16,6 @@ obj/
 
 # Other stuff
 Properties/
-MultiLauncherV2.vcxproj
-MultiLauncherV2.vcxproj.filters
-MultiLauncherV2.vcxproj.user
+MultiInstance.vcxproj
+MultiInstance.vcxproj.filters
+MultiInstance.vcxproj.user
