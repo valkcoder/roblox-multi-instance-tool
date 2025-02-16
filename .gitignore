@@ -16,6 +16,11 @@ obj/
 
 # Other stuff
 Properties/
+<<<<<<< HEAD
 MultiInstance.vcxproj
 MultiInstance.vcxproj.filters
 MultiInstance.vcxproj.user
+=======
+MultiInstanceEnabler.csproj
+MultiInstanceEnabler.csproj.user
+>>>>>>> be57193 (made it windows forms app)
